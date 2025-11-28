@@ -13,5 +13,8 @@ int main() {
 }
 
 void add_one(int *p) {
-  *p = *p + 1;
+  // The postfix ++ has higher precedence than *
+  // *p++;
+  (*p)++; // This would work just fine.
+  // *p = *p + 1;
 }
